@@ -1,17 +1,17 @@
 {
-    "name": ":vendor_slug/:package_slug",
-    "description": ":package_description",
+    "name": "gaurang/laravel-service-repository",
+    "description": "Laravel Service Repository Pattern",
     "keywords": [
-        ":vendor_name",
+        "Gaurang",
         "laravel",
-        ":package_slug"
+        "laravel-service-repository"
     ],
-    "homepage": "https://github.com/:vendor_slug/:package_slug",
+    "homepage": "https://github.com/gaurang/laravel-service-repository",
     "license": "MIT",
     "authors": [
         {
-            "name": ":author_name",
-            "email": "author@domain.com",
+            "name": "Gaurang Sharma",
+            "email": "gaurang@iogravity.com",
             "role": "Developer"
         }
     ],
@@ -34,13 +34,13 @@
     },
     "autoload": {
         "psr-4": {
-            "VendorName\\Skeleton\\": "src",
-            "VendorName\\Skeleton\\Database\\Factories\\": "database/factories"
+            "Gaurang\\LaravelServiceRepository\\": "src",
+            "Gaurang\\LaravelServiceRepository\\Database\\Factories\\": "database/factories"
         }
     },
     "autoload-dev": {
         "psr-4": {
-            "VendorName\\Skeleton\\Tests\\": "tests"
+            "Gaurang\\LaravelServiceRepository\\Tests\\": "tests"
         }
     },
     "scripts": {
@@ -54,10 +54,10 @@
     "extra": {
         "laravel": {
             "providers": [
-                "VendorName\\Skeleton\\SkeletonServiceProvider"
+                "Gaurang\\LaravelServiceRepository\\LaravelServiceRepositoryServiceProvider"
             ],
             "aliases": {
-                "Skeleton": "VendorName\\Skeleton\\Facades\\Skeleton"
+                "LaravelServiceRepository": "Gaurang\\LaravelServiceRepository\\Facades\\LaravelServiceRepository"
             }
         }
     },

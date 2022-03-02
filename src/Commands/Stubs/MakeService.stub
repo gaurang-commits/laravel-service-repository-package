@@ -1,0 +1,21 @@
+<?php
+namespace DummyNamespace;
+
+use App\Repositories\DummyClassRepository;
+
+class DummyClassService
+{
+    /**
+     * @var DummyClassRepository
+     */
+    private $repository;
+
+    /**
+     * DummyClassService constructor.
+     * @param DummyClassRepository $repository
+     */
+    public function __construct(DummyClassRepository $repository)
+    {
+        $this->repository = $repository;
+    }
+}
