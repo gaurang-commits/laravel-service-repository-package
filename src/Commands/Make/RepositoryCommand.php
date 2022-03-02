@@ -40,6 +40,7 @@ class RepositoryCommand extends GeneratorCommand
             $this->error('Model '.$this->argument('name').' does not exist');
             $this->newLine();
             $this->info('Create model '.$this->argument('name').' first.');
+
             return false;
         }
         parent::handle();
