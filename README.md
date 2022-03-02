@@ -1,9 +1,9 @@
 # Laravel Service Repository Pattern
 
-[![Latest Version on Packagist](https://img.shields.io/packagist/v/gaurang/laravel-service-repository.svg?style=flat-square)](https://packagist.org/packages/gaurang/laravel-service-repository)
+[![Latest Version on Packagist](https://img.shields.io/packagist/v/gaurang-commits/laravel-service-repository.svg?style=flat-square)](https://packagist.org/packages/gaurang-commits/laravel-service-repository)
 [![GitHub Tests Action Status](https://img.shields.io/github/workflow/status/gaurang-commits/laravel-service-repository-package/run-tests?label=tests)](https://github.com/gaurang-commits/laravel-service-repository-package/actions/workflows/run-tests.yml?query=branch%3Amain)
 [![GitHub Code Style Action Status](https://img.shields.io/github/workflow/status/gaurang-commits/laravel-service-repository-package/Check%20&%20fix%20styling?label=code%20style)](https://github.com/gaurang-commits/laravel-service-repository-package/actions/workflows/php-cs-fixer.yml?query=branch%3Amain)
-[![Total Downloads](https://img.shields.io/packagist/dt/gaurang/laravel-service-repository.svg?style=flat-square)](https://packagist.org/packages/gaurang/laravel-service-repository)
+[![Total Downloads](https://img.shields.io/packagist/dt/gaurang-commits/laravel-service-repository.svg?style=flat-square)](https://packagist.org/packages/gaurang-commits/laravel-service-repository)
 
 ## Installation
 
