@@ -30,6 +30,16 @@ return [
     ],
 ];
 ```
+
+## Usage
+
+```bash
+php artisan make:service User
+```
+```bash
+php artisan make:repository User
+```
+
 ## Testing
 
 ```bash
