@@ -47,14 +47,14 @@ class ServiceCommand extends GeneratorCommand
                 }
                 Artisan::call("make:repository", ['name' => $this->argument('name')]);
                 $this->info($this->argument('name').'Repository created successfully');
-            }
-            $this->error('Create '.$this->argument('name').'Repository before making service.');
-            $this->newLine();
-            $this->line('You can use the following command:');
-            $this->info('php artisan make:repository '.$this->argument('name'));
-            $this->newLine();
-
+            } else {
+                $this->error('Create '.$this->argument('name').'Repository before making service.');
+                $this->newLine();
+                $this->line('You can use the following command:');
+                $this->info('php artisan make:repository '.$this->argument('name'));
+                $this->newLine();
             return false;
+            }
         }
         parent::handle();
     }
