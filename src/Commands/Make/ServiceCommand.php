@@ -43,7 +43,7 @@ class ServiceCommand extends GeneratorCommand
                 if (! class_exists(config('service-repository.NAMESPACE.MODELS').'\\'.$this->argument('name'))) {
                     $this->error('Model '.$this->argument('name').' does not exist');
 
-                    return;
+                    return false;
                 }
                 Artisan::call("make:repository", ['name' => $this->argument('name')]);
                 $this->info($this->argument('name').'Repository created successfully');
@@ -54,7 +54,7 @@ class ServiceCommand extends GeneratorCommand
             $this->info('php artisan make:repository '.$this->argument('name'));
             $this->newLine();
 
-            return;
+            return false;
         }
         parent::handle();
     }
