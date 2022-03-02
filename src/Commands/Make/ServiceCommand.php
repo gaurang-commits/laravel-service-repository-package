@@ -53,7 +53,8 @@ class ServiceCommand extends GeneratorCommand
                 $this->line('You can use the following command:');
                 $this->info('php artisan make:repository '.$this->argument('name'));
                 $this->newLine();
-            return false;
+
+                return false;
             }
         }
         parent::handle();
