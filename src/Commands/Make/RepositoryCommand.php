@@ -36,14 +36,16 @@ class RepositoryCommand extends GeneratorCommand
 
     public function handle()
     {
-        if (!class_exists(config('service-repository.NAMESPACE.MODELS').'\\'.$this->argument('name'))) {
-                $this->error('Model '.$this->argument('name').' does not exist');
-                $this->newLine();
-                $this->info('Create model '.$this->argument('name').' first.');
-                return;
-            }
+        if (! class_exists(config('service-repository.NAMESPACE.MODELS').'\\'.$this->argument('name'))) {
+            $this->error('Model '.$this->argument('name').' does not exist');
+            $this->newLine();
+            $this->info('Create model '.$this->argument('name').' first.');
+
+            return;
+        }
         parent::handle();
     }
+
     /**
      * Get the stub file for the generator.
      *
@@ -64,6 +66,7 @@ class RepositoryCommand extends GeneratorCommand
     protected function getPath($name)
     {
         $name = str_replace($this->laravel->getNamespace(), '', $name);
+
         return $this->laravel['path'].'/'.str_replace('\\', '/', $name).'Repository.php';
     }
 
@@ -79,7 +82,6 @@ class RepositoryCommand extends GeneratorCommand
         return config('service-repository.NAMESPACE.REPOSITORIES');
     }
 
-
     /**
      * Build the class with the given name.
      *
@@ -90,6 +92,7 @@ class RepositoryCommand extends GeneratorCommand
     protected function buildClass($name)
     {
         $stub = $this->files->get($this->getStub());
+
         return $this->replaceNamespace($stub, $name)->replaceClass($stub, $name);
     }
 

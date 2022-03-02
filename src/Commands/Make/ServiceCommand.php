@@ -4,6 +4,7 @@ namespace Gaurang\LaravelServiceRepository\Commands\Make;
 
 use Illuminate\Console\GeneratorCommand;
 use Illuminate\Support\Facades\Artisan;
+
 class ServiceCommand extends GeneratorCommand
 {
     /**
@@ -36,11 +37,12 @@ class ServiceCommand extends GeneratorCommand
 
     public function handle()
     {
-        if (!class_exists(config('service-repository.NAMESPACE.REPOSITORIES').'\\'.$this->argument('name').'Repository')) {
+        if (! class_exists(config('service-repository.NAMESPACE.REPOSITORIES').'\\'.$this->argument('name').'Repository')) {
             $this->error('Repository '.$this->argument('name').'Repository does not exist');
-            if($this->confirm('Do you want to create '.$this->argument('name').'Repository ?')){
-                if(!class_exists(config('service-repository.NAMESPACE.MODELS').'\\'.$this->argument('name'))) {
+            if ($this->confirm('Do you want to create '.$this->argument('name').'Repository ?')) {
+                if (! class_exists(config('service-repository.NAMESPACE.MODELS').'\\'.$this->argument('name'))) {
                     $this->error('Model '.$this->argument('name').' does not exist');
+
                     return;
                 }
                 Artisan::call("make:repository", ['name' => $this->argument('name')]);
@@ -51,6 +53,7 @@ class ServiceCommand extends GeneratorCommand
             $this->line('You can use the following command:');
             $this->info('php artisan make:repository '.$this->argument('name'));
             $this->newLine();
+
             return;
         }
         parent::handle();
@@ -76,6 +79,7 @@ class ServiceCommand extends GeneratorCommand
     protected function getPath($name)
     {
         $name = str_replace($this->laravel->getNamespace(), '', $name);
+
         return $this->laravel['path'].'/'.str_replace('\\', '/', $name).'Service.php';
     }
 
@@ -101,6 +105,7 @@ class ServiceCommand extends GeneratorCommand
     protected function buildClass($name)
     {
         $stub = $this->files->get($this->getStub());
+
         return $this->replaceNamespace($stub, $name)->replaceClass($stub, $name);
     }
 

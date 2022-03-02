@@ -2,9 +2,9 @@
 
 namespace Gaurang\LaravelServiceRepository\Tests;
 
+use Gaurang\LaravelServiceRepository\LaravelServiceRepositoryServiceProvider;
 use Illuminate\Database\Eloquent\Factories\Factory;
 use Orchestra\Testbench\TestCase as Orchestra;
-use Gaurang\LaravelServiceRepository\LaravelServiceRepositoryServiceProvider;
 
 class TestCase extends Orchestra
 {

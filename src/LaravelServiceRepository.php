@@ -4,5 +4,4 @@ namespace Gaurang\LaravelServiceRepository;
 
 class LaravelServiceRepository
 {
-    
 }

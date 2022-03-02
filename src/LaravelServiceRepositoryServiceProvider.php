@@ -2,11 +2,10 @@
 
 namespace Gaurang\LaravelServiceRepository;
 
-use Spatie\LaravelPackageTools\Package;
-use Spatie\LaravelPackageTools\PackageServiceProvider;
-use Gaurang\LaravelServiceRepository\Commands\Make\LspCommand;
 use Gaurang\LaravelServiceRepository\Commands\Make\RepositoryCommand;
 use Gaurang\LaravelServiceRepository\Commands\Make\ServiceCommand;
+use Spatie\LaravelPackageTools\Package;
+use Spatie\LaravelPackageTools\PackageServiceProvider;
 
 class LaravelServiceRepositoryServiceProvider extends PackageServiceProvider
 {
