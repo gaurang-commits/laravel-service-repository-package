@@ -10,7 +10,7 @@
 You can install the package via composer:
 
 ```bash
-composer require gaurang/laravel-service-repository
+composer require gaurang-commits/laravel-service-repository
 ```
 
 You can publish the config file with:
